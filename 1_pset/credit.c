@@ -101,9 +101,8 @@ bool cardLength(long number, int length)
         case 16:
         {
             int firstTwo = number / 100000000000000;
-            int firstOne = number / 1000000000000000;
             // all Visa numbers start with 4
-            if (firstOne == 4)
+            if (firstTwo / 10 == 4)
             {
                 printf("VISA\n");
                 return true;
